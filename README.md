@@ -70,7 +70,7 @@ module StrOrNode = {
   ...
   type arg =
     | Str(string)
-    | Node(ReasonReact.reactElement);
+    | Node(React.reactElement);
   ...
 };
 ```
@@ -86,7 +86,7 @@ you will use it like this:
   interval=Num(12)
   label=Node(
     <span>
-      (ReasonReact.stringToElement("text"))
+      (React.string("text"))
     </span>
   )
 />

@@ -8,7 +8,7 @@
   ],
   "bs-dependencies": [
     "@ahrefs/bs-recharts",
-    "reason-react"
+    "@rescript/react"
   ],
   "package-specs": [{
     "module": "commonjs",
@@ -17,7 +17,5 @@
   "reason": {
     "react-jsx": 3
   },
-  "suffix": ".bs.js",
-  "bsc-flags": ["-bs-super-errors"],
-  "refmt": 3
+  "suffix": ".bs.js"
 }

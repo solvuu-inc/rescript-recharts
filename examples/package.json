@@ -2,9 +2,9 @@
   "name": "@ahrefs/bs-recharts-examples",
   "version": "0.1.0",
   "scripts": {
-    "build": "bsb -make-world",
-    "start": "bsb -make-world -w",
-    "clean": "bsb -clean-world",
+    "build": "rescript",
+    "start": "rescript build -with-deps -w",
+    "clean": "rescript clean -with-deps",
     "webpack": "webpack -w",
     "server": "webpack-dev-server"
   },
@@ -12,14 +12,14 @@
   "license": "MIT",
   "dependencies": {
     "@ahrefs/bs-recharts": "file:../",
+    "@rescript/react": "^0.10.3",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
-    "reason-react": ">=0.7.0",
     "recharts": "^1.6.2"
   },
   "devDependencies": {
-    "bs-platform": "^8,2,0",
     "html-webpack-plugin": "^3.2.0",
+    "rescript": "^9.1.2",
     "webpack": "^4.0.1",
     "webpack-cli": "^3.1.1",
     "webpack-dev-server": "^3.1.8"

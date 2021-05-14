@@ -2,12 +2,12 @@
   "name": "@ahrefs/bs-recharts",
   "version": "1.0.1",
   "scripts": {
-    "build": "bsb -make-world",
-    "watch": "bsb -make-world -w",
-    "clean": "bsb -clean-world",
-    "refmt": "find ./src ./examples -type f -name \"*.re\" | xargs bsrefmt --in-place"
+    "build": "rescript",
+    "start": "rescript build -with-deps -w",
+    "clean": "rescript clean -with-deps",
+    "refmt": "rescript format -all"
   },
-  "description": "Bucklescript bindings for Recharts",
+  "description": "ReScript bindings for Recharts",
   "homepage": "https://github.com/ahrefs/bs-recharts#readme",
   "repository": {
     "type": "git",
@@ -28,11 +28,11 @@
     "binding"
   ],
   "devDependencies": {
-    "bs-platform": "^8.2.0",
-    "reason-react": ">=0.7.0"
+    "@rescript/react": "^0.10.3",
+    "rescript": "^9.1.2"
   },
   "peerDependencies": {
-    "reason-react": ">=0.7.0",
+    "@rescript/react": "^0.10.3",
     "recharts": "^1.8.5"
   }
 }
