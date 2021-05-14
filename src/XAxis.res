@@ -1,5 +1,5 @@
-// http://recharts.org/en-US/api/YAxis
-open BsRecharts__Utils
+// http://recharts.org/en-US/api/XAxis
+open Utils
 
 @module("recharts") @react.component
 external make: (
@@ -26,8 +26,8 @@ external make: (
   ~onMouseOut: (Js.Nullable.t<{..}>, ReactEvent.Mouse.t) => unit=?,
   ~onMouseOver: (Js.Nullable.t<{..}>, ReactEvent.Mouse.t) => unit=?,
   ~onMouseUp: (Js.Nullable.t<{..}>, ReactEvent.Mouse.t) => unit=?,
-  ~orientation: [#left | #right]=?,
-  ~padding: paddingVertical=?,
+  ~orientation: [#bottom | #top]=?,
+  ~padding: paddingHorizontal=?,
   ~reversed: bool=?,
   ~scale: [
     | #auto
@@ -47,6 +47,7 @@ external make: (
     | #threshold
   ]=?,
   ~tick: 'tick=?,
+  ~tickCount: int=?,
   ~tickFormatter: 'tickFormatter=?,
   ~tickLine: 'tickLine=?,
   ~tickMargin: int=?,
@@ -54,7 +55,7 @@ external make: (
   ~tickSize: int=?,
   ~unit: string=?,
   ~width: int=?,
-  ~yAxisId: string=?,
-) => React.element = "YAxis"
+  ~xAxisId: string=?,
+) => React.element = "XAxis"
 
 let makeProps = (~interval=?) => makeProps(~interval=?interval->AxisInterval.encodeOpt)

@@ -1,6 +1,5 @@
 // http://recharts.org/en-US/api/ResponsiveContainer
-
-open BsRecharts__Utils
+open Utils
 
 @module("recharts") @react.component
 external make: (

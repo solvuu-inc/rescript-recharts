@@ -1,11 +1,10 @@
-// http://recharts.org/en-US/api/Area
-
-open BsRecharts__Utils
+// http://recharts.org/en-US/api/Pie
+open Utils
 
 @module("recharts") @react.component
 external make: (
-  ~_type: lineType=?,
-  ~activeDot: 'activeDot=?,
+  ~activeIndex: array<{..}>=?,
+  ~activeShape: 'activeShape=?,
   ~animationBegin: int=?,
   ~animationDuration: int=?,
   ~animationEasing: [
@@ -15,18 +14,18 @@ external make: (
     | @as("ease-in-out") #easeInOut
     | #linear
   ]=?,
-  ~baseLine: 'baseLine=?,
-  ~connectNulls: bool=?,
-  ~hide: bool=?,
   ~className: string=?,
+  ~cx: PxOrPrc.t=?,
+  ~cy: PxOrPrc.t=?,
+  ~data: array<'dataItem>,
   ~dataKey: 'dataKey,
-  ~dot: 'dot=?,
+  ~endAngle: int=?,
   ~fill: string=?,
-  ~fillOpacity: float=?,
   ~id: string=?,
+  ~innerRadius: PxOrPrc.t=?,
   ~isAnimationActive: bool=?,
   ~label: 'label=?,
-  ~layout: [#horizontal | #vertical]=?,
+  ~labelLine: 'labelLine=?,
   ~legendType: [
     | #line
     | #square
@@ -39,7 +38,8 @@ external make: (
     | #triangle
     | #wye
   ]=?,
-  ~name: string=?,
+  ~minAngle: int=?,
+  ~nameKey: string=?,
   ~onClick: (Js.Nullable.t<{..}>, ReactEvent.Mouse.t) => unit=?,
   ~onMouseDown: (Js.Nullable.t<{..}>, ReactEvent.Mouse.t) => unit=?,
   ~onMouseEnter: (Js.Nullable.t<{..}>, ReactEvent.Mouse.t) => unit=?,
@@ -48,11 +48,17 @@ external make: (
   ~onMouseOut: (Js.Nullable.t<{..}>, ReactEvent.Mouse.t) => unit=?,
   ~onMouseOver: (Js.Nullable.t<{..}>, ReactEvent.Mouse.t) => unit=?,
   ~onMouseUp: (Js.Nullable.t<{..}>, ReactEvent.Mouse.t) => unit=?,
-  ~points: array<{..}>=?,
-  ~stackId: string=?,
+  ~outerRadius: PxOrPrc.t=?,
+  ~paddingAngle: int=?,
+  ~startAngle: int=?,
   ~stroke: string=?,
-  ~strokeWidth: int=?,
-  ~unit: string=?,
-  ~xAxisId: string=?,
-  ~yAxisId: string=?,
-) => React.element = "Area"
+  ~children: React.element=?,
+) => React.element = "Pie"
+
+let makeProps = (~cx=?, ~cy=?, ~innerRadius=?, ~outerRadius=?) =>
+  makeProps(
+    ~cx=?cx->PxOrPrc.encodeOpt,
+    ~cy=?cy->PxOrPrc.encodeOpt,
+    ~innerRadius=?innerRadius->PxOrPrc.encodeOpt,
+    ~outerRadius=?outerRadius->PxOrPrc.encodeOpt,
+  )

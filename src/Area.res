@@ -1,6 +1,5 @@
-// http://recharts.org/en-US/api/Line
-
-open BsRecharts__Utils
+// http://recharts.org/en-US/api/Area
+open Utils
 
 @module("recharts") @react.component
 external make: (
@@ -15,11 +14,14 @@ external make: (
     | @as("ease-in-out") #easeInOut
     | #linear
   ]=?,
-  ~className: string=?,
+  ~baseLine: 'baseLine=?,
   ~connectNulls: bool=?,
   ~hide: bool=?,
+  ~className: string=?,
   ~dataKey: 'dataKey,
   ~dot: 'dot=?,
+  ~fill: string=?,
+  ~fillOpacity: float=?,
   ~id: string=?,
   ~isAnimationActive: bool=?,
   ~label: 'label=?,
@@ -46,9 +48,10 @@ external make: (
   ~onMouseOver: (Js.Nullable.t<{..}>, ReactEvent.Mouse.t) => unit=?,
   ~onMouseUp: (Js.Nullable.t<{..}>, ReactEvent.Mouse.t) => unit=?,
   ~points: array<{..}>=?,
+  ~stackId: string=?,
   ~stroke: string=?,
   ~strokeWidth: int=?,
   ~unit: string=?,
   ~xAxisId: string=?,
   ~yAxisId: string=?,
-) => React.element = "Line"
+) => React.element = "Area"

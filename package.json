@@ -1,31 +1,32 @@
 {
-  "name": "@ahrefs/bs-recharts",
-  "version": "1.0.1",
+  "name": "@minnozz/rescript-recharts",
+  "version": "1.0.0",
   "scripts": {
-    "build": "rescript",
+    "build": "rescript build -with-deps",
     "start": "rescript build -with-deps -w",
     "clean": "rescript clean -with-deps",
     "refmt": "rescript format -all"
   },
   "description": "ReScript bindings for Recharts",
-  "homepage": "https://github.com/ahrefs/bs-recharts#readme",
+  "homepage": "https://github.com/Minnozz/rescript-recharts#readme",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/ahrefs/bs-recharts.git"
+    "url": "git+ssh://git@github.com/Minnozz/rescript-recharts.git"
   },
   "bugs": {
-    "url": "https://github.com/ahrefs/bs-recharts/issues"
+    "url": "https://github.com/Minnozz/rescript-recharts/issues"
   },
-  "author": "ahrefs",
+  "author": "Bart Schuurmans <bart@minnozz.com>",
   "license": "MIT",
   "keywords": [
-    "react",
-    "reactjs",
-    "chart",
-    "react-component",
+    "binding",
     "bucklescript",
+    "chart",
+    "react",
+    "react-component",
+    "reactjs",
     "recharts",
-    "binding"
+    "rescript"
   ],
   "devDependencies": {
     "@rescript/react": "^0.10.3",

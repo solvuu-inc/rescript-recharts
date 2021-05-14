@@ -1,17 +1,17 @@
 {
-  "name": "@ahrefs/bs-recharts-examples",
+  "name": "@minnozz/rescript-recharts-examples",
   "version": "0.1.0",
   "scripts": {
-    "build": "rescript",
+    "build": "rescript build -with-deps",
     "start": "rescript build -with-deps -w",
     "clean": "rescript clean -with-deps",
     "webpack": "webpack -w",
     "server": "webpack-dev-server"
   },
-  "author": "ahrefs",
+  "author": "Bart Schuurmans <bart@minnozz.com>",
   "license": "MIT",
   "dependencies": {
-    "@ahrefs/bs-recharts": "file:../",
+    "@minnozz/rescript-recharts": "file:../",
     "@rescript/react": "^0.10.3",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",

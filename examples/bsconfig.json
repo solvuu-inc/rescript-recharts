@@ -1,5 +1,5 @@
 {
-  "name": "@ahrefs/bs-recharts-examples",
+  "name": "@minnozz/rescript-recharts-examples",
   "sources": [
     {
       "dir": "src",
@@ -7,7 +7,7 @@
     }
   ],
   "bs-dependencies": [
-    "@ahrefs/bs-recharts",
+    "@minnozz/rescript-recharts",
     "@rescript/react"
   ],
   "package-specs": [{

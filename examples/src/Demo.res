@@ -1,4 +1,4 @@
-open BsRecharts
+open Recharts
 
 @react.component
 let make = (~data) =>

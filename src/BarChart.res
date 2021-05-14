@@ -1,16 +1,17 @@
-// http://recharts.org/en-US/api/ComposedChart
-open BsRecharts__Utils
+// http://recharts.org/en-US/api/BarChart
+open Utils
 
 @module("recharts") @react.component
 external make: (
-  ~className: string=?,
   ~data: array<'dataItem>,
   ~barCategoryGap: PxOrPrc.t=?,
   ~barGap: PxOrPrc.t=?,
   ~barSize: int=?,
+  ~className: string=?,
   ~height: int=?,
   ~layout: [#horizontal | #vertical]=?,
   ~margin: margin=?,
+  ~maxBarSize: int=?,
   ~onClick: (Js.Nullable.t<{..}>, ReactEvent.Mouse.t) => unit=?,
   ~onMouseUp: (Js.Nullable.t<{..}>, ReactEvent.Mouse.t) => unit=?,
   ~onMouseDown: (Js.Nullable.t<{..}>, ReactEvent.Mouse.t) => unit=?,
@@ -28,7 +29,7 @@ external make: (
   ~syncId: string=?,
   ~width: int=?,
   ~children: React.element,
-) => React.element = "ComposedChart"
+) => React.element = "BarChart"
 
 let makeProps = (~barCategoryGap=?, ~barGap=?) =>
   makeProps(~barCategoryGap=?barCategoryGap->PxOrPrc.encodeOpt, ~barGap=?barGap->PxOrPrc.encodeOpt)

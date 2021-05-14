@@ -1,5 +1,5 @@
 // http://recharts.org/en-US/api/CartesianAxis
-open BsRecharts__Utils
+open Utils
 
 @module("recharts") @react.component
 external make: (

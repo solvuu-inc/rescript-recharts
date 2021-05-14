@@ -1,10 +1,10 @@
-// http://recharts.org/en-US/api/Pie
-open BsRecharts__Utils
+// http://recharts.org/en-US/api/Line
+open Utils
 
 @module("recharts") @react.component
 external make: (
-  ~activeIndex: array<{..}>=?,
-  ~activeShape: 'activeShape=?,
+  ~_type: lineType=?,
+  ~activeDot: 'activeDot=?,
   ~animationBegin: int=?,
   ~animationDuration: int=?,
   ~animationEasing: [
@@ -15,17 +15,14 @@ external make: (
     | #linear
   ]=?,
   ~className: string=?,
-  ~cx: PxOrPrc.t=?,
-  ~cy: PxOrPrc.t=?,
-  ~data: array<'dataItem>,
+  ~connectNulls: bool=?,
+  ~hide: bool=?,
   ~dataKey: 'dataKey,
-  ~endAngle: int=?,
-  ~fill: string=?,
+  ~dot: 'dot=?,
   ~id: string=?,
-  ~innerRadius: PxOrPrc.t=?,
   ~isAnimationActive: bool=?,
   ~label: 'label=?,
-  ~labelLine: 'labelLine=?,
+  ~layout: [#horizontal | #vertical]=?,
   ~legendType: [
     | #line
     | #square
@@ -38,8 +35,7 @@ external make: (
     | #triangle
     | #wye
   ]=?,
-  ~minAngle: int=?,
-  ~nameKey: string=?,
+  ~name: string=?,
   ~onClick: (Js.Nullable.t<{..}>, ReactEvent.Mouse.t) => unit=?,
   ~onMouseDown: (Js.Nullable.t<{..}>, ReactEvent.Mouse.t) => unit=?,
   ~onMouseEnter: (Js.Nullable.t<{..}>, ReactEvent.Mouse.t) => unit=?,
@@ -48,17 +44,10 @@ external make: (
   ~onMouseOut: (Js.Nullable.t<{..}>, ReactEvent.Mouse.t) => unit=?,
   ~onMouseOver: (Js.Nullable.t<{..}>, ReactEvent.Mouse.t) => unit=?,
   ~onMouseUp: (Js.Nullable.t<{..}>, ReactEvent.Mouse.t) => unit=?,
-  ~outerRadius: PxOrPrc.t=?,
-  ~paddingAngle: int=?,
-  ~startAngle: int=?,
+  ~points: array<{..}>=?,
   ~stroke: string=?,
-  ~children: React.element=?,
-) => React.element = "Pie"
-
-let makeProps = (~cx=?, ~cy=?, ~innerRadius=?, ~outerRadius=?) =>
-  makeProps(
-    ~cx=?cx->PxOrPrc.encodeOpt,
-    ~cy=?cy->PxOrPrc.encodeOpt,
-    ~innerRadius=?innerRadius->PxOrPrc.encodeOpt,
-    ~outerRadius=?outerRadius->PxOrPrc.encodeOpt,
-  )
+  ~strokeWidth: int=?,
+  ~unit: string=?,
+  ~xAxisId: string=?,
+  ~yAxisId: string=?,
+) => React.element = "Line"

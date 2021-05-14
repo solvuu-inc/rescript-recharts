@@ -1,5 +1,5 @@
 // http://recharts.org/en-US/api/LineChart
-open BsRecharts__Utils
+open Utils
 
 @module("recharts") @react.component
 external make: (
