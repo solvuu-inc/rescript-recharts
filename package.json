@@ -1,6 +1,6 @@
 {
   "name": "@minnozz/rescript-recharts",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "scripts": {
     "build": "rescript build -with-deps",
     "start": "rescript build -with-deps -w",
