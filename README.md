@@ -27,7 +27,7 @@ Add rescript-recharts to `bs-depenencies` in your `bsconfig.json`:
 ```res
 @react.component
 let make = (~data) => {
-  open BsRecharts;
+  open Recharts;
 
   <ResponsiveContainer height={Px(200.)} width={Px(300.)}>
     <BarChart
