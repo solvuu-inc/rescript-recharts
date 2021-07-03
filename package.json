@@ -8,15 +8,15 @@
     "refmt": "rescript format -all"
   },
   "description": "ReScript bindings for Recharts",
-  "homepage": "https://github.com/Minnozz/rescript-recharts#readme",
+  "homepage": "https://github.com/float-capital/rescript-recharts#readme",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/Minnozz/rescript-recharts.git"
+    "url": "git+ssh://git@github.com/float-capital/rescript-recharts.git"
   },
   "bugs": {
-    "url": "https://github.com/Minnozz/rescript-recharts/issues"
+    "url": "https://github.com/float-capital/rescript-recharts/issues"
   },
-  "author": "Bart Schuurmans <bart@minnozz.com>",
+  "author": "Bart Schuurmans <bart@float-capital.com>",
   "license": "MIT",
   "keywords": [
     "binding",

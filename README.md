@@ -7,7 +7,7 @@ It is a fork of [ahrefs/bs-recharts](https://github.com/ahrefs/bs-recharts), upd
 # Installation
 
 ```
-npm install @minnozz/rescript-recharts --save-dev
+npm install @float-capital/rescript-recharts --save-dev
 ```
 
 # Setup
@@ -16,9 +16,7 @@ Add rescript-recharts to `bs-depenencies` in your `bsconfig.json`:
 
 ```json
 {
-  "bs-dependencies": [
-    "@minnozz/rescript-recharts"
-  ]
+  "bs-dependencies": ["@float-capital/rescript-recharts"]
 }
 ```
 

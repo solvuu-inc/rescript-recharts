@@ -1,5 +1,5 @@
 {
-  "name": "@minnozz/rescript-recharts-examples",
+  "name": "@float-capital/rescript-recharts-examples",
   "sources": [
     {
       "dir": "src",
@@ -7,13 +7,15 @@
     }
   ],
   "bs-dependencies": [
-    "@minnozz/rescript-recharts",
+    "@float-capital/rescript-recharts",
     "@rescript/react"
   ],
-  "package-specs": [{
-    "module": "commonjs",
-    "in-source": true
-  }],
+  "package-specs": [
+    {
+      "module": "commonjs",
+      "in-source": true
+    }
+  ],
   "reason": {
     "react-jsx": 3
   },

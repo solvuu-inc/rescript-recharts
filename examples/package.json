@@ -1,5 +1,5 @@
 {
-  "name": "@minnozz/rescript-recharts-examples",
+  "name": "@float-capital/rescript-recharts-examples",
   "version": "0.1.0",
   "scripts": {
     "build": "rescript build -with-deps",
@@ -8,10 +8,10 @@
     "webpack": "webpack -w",
     "server": "webpack serve"
   },
-  "author": "Bart Schuurmans <bart@minnozz.com>",
+  "author": "Bart Schuurmans <bart@float-capital.com>",
   "license": "MIT",
   "dependencies": {
-    "@minnozz/rescript-recharts": "file:../",
+    "@float-capital/rescript-recharts": "file:../",
     "@rescript/react": "^0.10.3",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
