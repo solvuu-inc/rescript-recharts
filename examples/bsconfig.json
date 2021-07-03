@@ -1,5 +1,5 @@
 {
-  "name": "@ahrefs/bs-recharts-examples",
+  "name": "@minnozz/rescript-recharts-examples",
   "sources": [
     {
       "dir": "src",
@@ -7,8 +7,8 @@
     }
   ],
   "bs-dependencies": [
-    "@ahrefs/bs-recharts",
-    "reason-react"
+    "@minnozz/rescript-recharts",
+    "@rescript/react"
   ],
   "package-specs": [{
     "module": "commonjs",
@@ -17,7 +17,5 @@
   "reason": {
     "react-jsx": 3
   },
-  "suffix": ".bs.js",
-  "bsc-flags": ["-bs-super-errors"],
-  "refmt": 3
+  "suffix": ".bs.js"
 }

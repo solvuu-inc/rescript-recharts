@@ -1,10 +1,10 @@
 ## Run Project
 
 ```sh
-yarn
-yarn start
+npm i
+npm run start
 # in another tab
-yarn run server
+npm run server
 ```
 
 Open http://localhost:3000 in the browser.
