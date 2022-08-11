@@ -47,6 +47,7 @@ external make: (
     | #threshold
   ]=?,
   ~tick: 'tick=?,
+  ~tickCount: int=?,
   ~tickFormatter: 'tickFormatter=?,
   ~tickLine: 'tickLine=?,
   ~tickMargin: int=?,
