@@ -30,5 +30,3 @@ external make: (
   ~children: React.element,
 ) => React.element = "ComposedChart"
 
-let makeProps = (~barCategoryGap=?, ~barGap=?) =>
-  makeProps(~barCategoryGap=?barCategoryGap->PxOrPrc.encodeOpt, ~barGap=?barGap->PxOrPrc.encodeOpt)
